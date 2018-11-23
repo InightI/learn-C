@@ -1,0 +1,20 @@
+
+#include <stdio.h>
+int CiFang(int n,int k)    
+{
+	int sum;
+	if (k==0)
+	{
+		sum=1;
+	}
+	else 
+	{
+		sum=n*fun(n,k-1);
+	}
+	return sum;
+}
+int main ()
+{
+	printf("%d\n",CiFang(2,3));
+	return 0;
+}

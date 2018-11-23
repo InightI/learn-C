@@ -1,0 +1,36 @@
+/* 编写一个函数reverse_string(char * string)
+实现：将参数字符串中的字符反向排列。
+要求：不能使用C函数库中的字符串操作函数。*/
+#include <stdio.h>
+
+void reverse_string(char * string)
+{
+	char *p = string;
+	char temp;
+	while (*p)
+	{
+		p++;
+	}
+	p--;
+	while (string <= p)
+	{
+		temp = *p;
+		*p = *string;
+		*string = temp;
+		string++;
+		p--;
+	}
+
+}
+
+int main()
+{
+	char string[] = "sadjasdert";
+	printf("原字符串是：\n");
+	puts(string);
+	reverse_string(string);
+	printf("反向排列后的字符串：%s\n", string);
+
+	system("pause");
+	return 0;
+}
